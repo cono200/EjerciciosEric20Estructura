@@ -82,6 +82,26 @@ namespace EjerciciosEric20Estructura
 
         public void Divisirve(double numero)
         {
+
+            if (numero % 2 !=0 && numero % 3 !=0)
+            {
+                Console.WriteLine("No es karnal");
+            }
+
+            else if (numero %2 == 0 && numero %3 ==0)
+            {
+                Console.WriteLine("Se puede dividir tanto con 2 como por 3");
+            }
+            else if (numero % 2 == 0)
+            {
+                Console.WriteLine("Se puede dividir por 2");
+            }
+
+            else
+            {
+                Console.WriteLine("Se puede dividir entre 3");
+            }
+            /*
              if (numero % 2 == 0 && numero % 3 == 0)
             {
                 Console.WriteLine("Se puede dividir tanto con 2 y con 3");
@@ -98,6 +118,7 @@ namespace EjerciciosEric20Estructura
             {
                 Console.WriteLine("No ai");
             }
+            */
 
 
         }
@@ -141,7 +162,7 @@ namespace EjerciciosEric20Estructura
 
         }
 
-
+        //METODO MIO
         public void  NumeroPrimo(double numero)
         {
 
@@ -160,6 +181,21 @@ namespace EjerciciosEric20Estructura
         }
 
 
+        //METODO DE PROFE
+        public bool EsPrimo(int numero2)
+        {
+            bool esPrimo = true;
+            for(int x=2; x< numero2; x++)
+            {
+                if ( numero2 % x == 0)
+                {
+                    esPrimo= false;
+                }
+            }
+            return esPrimo;
+        }
+
+
       
 
         public   double Descuento(double precioOriginal, double porcentajeDescuento)
@@ -170,6 +206,42 @@ namespace EjerciciosEric20Estructura
                 
             return resultado;
          }
+
+
+        public bool Palindromo(string numero1)
+        {
+            bool palindromo= true;
+            for (int i=0; i<numero1.Length/2; i++)
+            {
+                if (numero1[i] != numero1[numero1.Length - i - 1])
+                {
+                    palindromo= false;
+                }
+            }
+            return palindromo;
+        }
+
+
+        public int  SumarNumeros(int numeroSuma)
+        {
+
+            int suma = 0;
+            if(numeroSuma < 0)
+            {
+                return suma;
+            }
+            for (int i = 0; i <= numeroSuma; i++)
+            {
+                suma+=i;
+            }
+            return suma;
+        }
+
+
+
+
+
+
 
         internal string ToString(string? v)
         {
